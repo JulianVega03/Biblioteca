@@ -53,6 +53,7 @@ public class PrestamoServiceImpl implements PrestamoService{
                         );
                 throw new AccionNoPermitidaException(mensajeError);
             }
+
         }else if(tipoUsuario == TipoUsuario.EMPLEADO){
             fechaDevolucion = calcularFechaDevolucionParaTipoUsuario(TipoUsuario.EMPLEADO);
 

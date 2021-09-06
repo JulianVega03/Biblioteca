@@ -7,7 +7,6 @@ import com.ceiba.biblioteca.exceptions.AccionNoPermitidaException;
 import com.ceiba.biblioteca.exceptions.BibliotecaException;
 import com.ceiba.biblioteca.exceptions.PrestamoNoEncontradoException;
 import com.ceiba.biblioteca.exceptions.TipoUsuarioNoPermitidoException;
-import com.ceiba.biblioteca.repository.PrestamoRepository;
 import com.ceiba.biblioteca.service.PrestamoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +18,8 @@ public class PrestamoController {
 
     private final PrestamoService prestamoService;
 
-    private final PrestamoRepository prestamoRepository;
-
-    public PrestamoController(PrestamoService prestamoService, PrestamoRepository prestamoRepository){
+    public PrestamoController(PrestamoService prestamoService){
         this.prestamoService = prestamoService;
-        this.prestamoRepository = prestamoRepository;
     }
 
     @PostMapping
